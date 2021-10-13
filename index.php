@@ -63,7 +63,6 @@ $product_number=0;
 //loop through all the <p> elements
 for($i=0; $i<count($ptag); $i++){
     if ( $ptag->item($i)->getAttribute('class')=="product-name" ){
-        echo $ptag->item($i)->nodeValue; 
         ${'product'.$product_number} = new Product();
         ${'product'.$product_number}->set_name($ptag->item($i)->nodeValue);
     }
@@ -114,4 +113,3 @@ print_r($json);
 
 
 
-?>
